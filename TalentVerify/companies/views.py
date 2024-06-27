@@ -1,5 +1,8 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from rest_framework import generics
+from .models import Company
+from .serializers import CompanySerializer
 
-def main(request):
-    return HttpResponse("<h1>Hello this is the  companies app </h1>")
+class CompanyView(generics.ListAPIView):
+    queryset=Company.objects.all()
+    serializer_class=CompanySerializer
