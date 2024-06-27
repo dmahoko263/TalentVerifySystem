@@ -1,5 +1,8 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from rest_framework import generics
+from .models import Employee
+from .serializers import EmployeeSerializer
 
-def main(request):
-    return HttpResponse("<h1> Hello this is the eemployees app</h1>")
+class EmployeeView(generics.ListAPIView):
+    queryset=Employee.objects.all()
+    serializer_class=EmployeeSerializer
