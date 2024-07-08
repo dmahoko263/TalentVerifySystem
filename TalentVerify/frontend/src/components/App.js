@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'; 
+import HomePage from './HomePage';
 
 export default class App extends Component {
   constructor(props) {
@@ -6,6 +7,10 @@ export default class App extends Component {
   }
 
   render() {
-    return <h1>React frontend set react 18</h1>;
+    return (
+      <div>
+        <HomePage />
+      </div>
+    );
   }
 }
