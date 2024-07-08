@@ -1,24 +1,28 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { AppBar, Toolbar, Typography, Button } from '@mui/material';
+import { Link as RouterLink } from 'react-router-dom';
 
 function Navigation() {
     return (
-        <nav>
-            <ul>
-                <li>
-                    <Link to="/">Home</Link>
-                </li>
-                <li>
-                    <Link to="/upload">Bulk Uploads</Link>
-                </li>
-                <li>
-                    <Link to="/elist">Employee List</Link>
-                </li>
-                <li>
-                    <Link to="/employees/add">Add Employee</Link>
-                </li>
-            </ul>
-        </nav>
+        <AppBar position="fixed"sx={{ zIndex: 5 }}>
+            <Toolbar>
+                <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                    TalentVerify App
+                </Typography>
+                <Button color="inherit" component={RouterLink} to="/">
+                    Home
+                </Button>
+                <Button color="inherit" component={RouterLink} to="/upload">
+                    Bulk Uploads
+                </Button>
+                <Button color="inherit" component={RouterLink} to="/elist">
+                    Employee List
+                </Button>
+                <Button color="inherit" component={RouterLink} to="/employees/add">
+                    Add Employee
+                </Button>
+            </Toolbar>
+        </AppBar>
     );
 }
 
