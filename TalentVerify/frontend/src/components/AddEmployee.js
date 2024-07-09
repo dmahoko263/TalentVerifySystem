@@ -25,7 +25,7 @@ export default class AddEmployee extends Component {
   }
 
   fetchCompanies() {
-    fetch("http://127.0.0.1:8000/companies/")
+    fetch("/companies/")
       .then((response) => {
         console.log('Response status:', response.status); // Debugging log
         if (!response.ok) {

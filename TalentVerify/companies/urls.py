@@ -3,4 +3,5 @@ from .views import CompanyView
 
 urlpatterns = [
    path('',CompanyView.as_view())
+   
 ]
